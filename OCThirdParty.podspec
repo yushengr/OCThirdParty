@@ -18,8 +18,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yushengr/OCThirdParty', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/**/**'
-
   s.subspec 'MJRefresh' do |ss|
     ss.dependency 'MJRefresh'
     ss.source_files = 'Classes/MJRefresh/**'
@@ -28,6 +26,8 @@ Pod::Spec.new do |s|
   s.subspec 'SDWebImage' do |ss|
     ss.dependency 'SDWebImage'
     ss.source_files = 'Classes/SDWebImage/**'
+    ss.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SRCROOT)/SDWebImage/SDWebImage" }
+
   end
 
 end

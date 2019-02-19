@@ -4,6 +4,6 @@ platform :ios do
 	
   lane :pod_repo_push do
     
-  pod_push(path: "OCCategory.podspec", repo: "Specs",  allow_warnings: true)
+  pod_push(path: "OCThirdParty.podspec", repo: "Specs",  allow_warnings: true, use_libraries: true)
   end
 end

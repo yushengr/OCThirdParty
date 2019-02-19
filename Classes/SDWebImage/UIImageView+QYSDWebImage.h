@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 // Vendors
-#import <UIImageView+WebCache.h>
-
+#import <SDWebImage/UIImageView+WebCache.h>
 /**
  *  监听下载成功的Block
  *
