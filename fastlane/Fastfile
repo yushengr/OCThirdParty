@@ -1,0 +1,9 @@
+default_platform(:ios)
+
+platform :ios do
+	
+  lane :pod_repo_push do
+    
+  pod_push(path: "OCCategory.podspec", repo: "Specs",  allow_warnings: true)
+  end
+end
