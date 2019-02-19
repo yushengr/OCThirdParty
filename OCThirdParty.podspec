@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OCThirdParty'
-  s.version          = '0.2.0'
+  s.version          = '0.1.0'
   s.summary          = 'OC ThirdParty'
   s.description      = 'This is OC OCThirdParty'
 
@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
   s.subspec 'MJRefresh' do |ss|
     ss.dependency 'MJRefresh'
     ss.source_files = 'Classes/MJRefresh/**'
-    ss.frameworks = 'runtime'
   end
 
   s.subspec 'SDWebImage' do |ss|
