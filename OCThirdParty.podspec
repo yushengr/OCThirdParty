@@ -16,11 +16,18 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'InsectQY' => '704861917@qq.com' }
   s.source           = { :git => 'https://github.com/yushengr/OCThirdParty', :tag => s.version.to_s }
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Classes/**/**'
 
-  s.dependency 'SDWebImage'
-  s.dependency 'MJRefresh'
+  s.subspec 'MJRefresh' do |ss|
+    ss.dependency 'MJRefresh'
+    ss.source_files = 'Classes/MJRefresh/**'
+  end
+
+  s.subspec 'SDWebImage' do |ss|
+    ss.dependency 'SDWebImage'
+    ss.source_files = 'Classes/SDWebImage/**'
+  end
 
 end
