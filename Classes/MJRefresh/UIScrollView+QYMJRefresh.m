@@ -8,18 +8,25 @@
 
 #import "UIScrollView+QYMJRefresh.h"
 
+#import <objc/runtime.h>
 #import <MJRefresh.h>
 
 @implementation UIScrollView (QYMJRefresh)
 
+static void *key = &key;
+
 - (void)setHeaderState:(BOOL)headerState {
 
-    self.headerState = headerState;
     if (headerState) {
         [self.mj_header beginRefreshing];
     }else {
         [self.mj_header endRefreshing];
     }
+    objc_setAssociatedObject(self, &key, @(headerState), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)headerState {
+    return [objc_getAssociatedObject(self, &key) boolValue];
 }
 
 - (void)setFooterState:(RefreshFooterState)footerState {
@@ -38,6 +45,11 @@
             [self.mj_footer resetNoMoreData];
             break;
     }
+    objc_setAssociatedObject(self, &key, @(footerState), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (RefreshFooterState)footerState {
+    return [objc_getAssociatedObject(self, &key) integerValue];
 }
 
 @end
