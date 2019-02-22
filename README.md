@@ -13,7 +13,7 @@ iOS 8+
 首先添加 source
 
 ```
-source 'https://github.com/yushengr/Specs'
+source 'https://github.com/yushengr/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 ```
 
