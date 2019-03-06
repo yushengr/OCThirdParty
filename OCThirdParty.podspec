@@ -30,4 +30,10 @@ Pod::Spec.new do |s|
 
   end
 
+  s.subspec 'SVProgressHUD' do |ss|
+    ss.dependency 'SVProgressHUD'
+    ss.source_files = 'Classes/SVProgressHUD/**'
+
+  end
+
 end
