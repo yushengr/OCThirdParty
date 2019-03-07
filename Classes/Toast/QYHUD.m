@@ -31,6 +31,8 @@
     [QMUITips showInfo:text];
 }
 
-
++ (void)dismiss {
+    [QMUITips hideAllTips];
+}
 
 @end

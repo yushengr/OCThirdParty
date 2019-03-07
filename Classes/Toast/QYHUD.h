@@ -20,4 +20,6 @@
 
 + (void)showInfo:(nullable NSString *)text;
 
++ (void)dismiss;
+
 @end
