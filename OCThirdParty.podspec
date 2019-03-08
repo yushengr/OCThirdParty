@@ -36,4 +36,9 @@ Pod::Spec.new do |s|
 
   end
 
+  s.subspec 'YTKNetwork' do |ss|
+    ss.dependency 'YTKNetwork'
+    ss.source_files = 'Classes/YTKNetwork/**'
+  end
+
 end
