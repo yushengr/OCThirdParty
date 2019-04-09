@@ -39,7 +39,7 @@ typedef void(^DownImageProgressBlock)(CGFloat progress);
  *  @param urlStr    图片地址
  *  @param imageName 占位图片名字
  */
-- (void)setImage:(NSString *)urlStr Placeholder:(NSString *)imageName;
+- (void)qy_setImage:(NSString *)urlStr Placeholder:(NSString *)imageName;
 
 
 /**
@@ -51,6 +51,6 @@ typedef void(^DownImageProgressBlock)(CGFloat progress);
  *  @param failed    下载失败
  *  @param progress  下载进度
  */
-- (void)setImage:(NSString *)urlStr Placeholder:(NSString *)imageName Success:(DownImageSuccessBlock)success Failed:(DownImageFailedBlock)failed progress:(DownImageProgressBlock)progress;
+- (void)qy_setImage:(NSString *)urlStr Placeholder:(NSString *)imageName Success:(DownImageSuccessBlock)success Failed:(DownImageFailedBlock)failed progress:(DownImageProgressBlock)progress;
 
 @end

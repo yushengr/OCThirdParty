@@ -11,13 +11,13 @@
 @implementation UIImageView (QYSDWebImage)
 
 #pragma mark - 下载
-- (void)setImage:(NSString *)urlStr Placeholder:(NSString *)imageName {
+- (void)qy_setImage:(NSString *)urlStr Placeholder:(NSString *)imageName {
 
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed | SDWebImageLowPriority];
 }
 
 #pragma mark - 下载监听回调
-- (void)setImage:(NSString *)urlStr Placeholder:(NSString *)imageName Success:(DownImageSuccessBlock)success Failed:(DownImageFailedBlock)failed progress:(DownImageProgressBlock)progress {
+- (void)qy_setImage:(NSString *)urlStr Placeholder:(NSString *)imageName Success:(DownImageSuccessBlock)success Failed:(DownImageFailedBlock)failed progress:(DownImageProgressBlock)progress {
 
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:imageName] options:SDWebImageRetryFailed | SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
 
